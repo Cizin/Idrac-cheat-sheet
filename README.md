@@ -27,4 +27,7 @@ $ racadm -r $IPADDRESSIDRAC -u $USERIDRAC -p $PWDIDRAC set iDRAC.NTPConfigGroup.
 
 # Enable NTP
 $ racadm -r $IPADDRESSIDRAC -u $USERIDRAC -p $PWDIDRAC set iDRAC.NTPConfigGroup.NTPEnable Enabled
+
+# Set static IP Address
+$ racadm -r $IPADDRESSIDRAC -u $USERIDRAC -p $PWDIDRAC setniccfg -s $IP $Netmask $IPGateway
 ```
