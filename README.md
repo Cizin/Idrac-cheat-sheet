@@ -30,4 +30,10 @@ $ racadm -r $IPADDRESSIDRAC -u $USERIDRAC -p $PWDIDRAC set iDRAC.NTPConfigGroup.
 
 # Set static IP Address
 $ racadm -r $IPADDRESSIDRAC -u $USERIDRAC -p $PWDIDRAC setniccfg -s $IP $Netmask $IPGateway
+
+# Enabled remote syslog
+$ racadm -r $IPADDRESSIDRAC -u $USERIDRAC -p $PWDIDRAC set iDRAC.SysLog.SysLogEnable Enabled
+
+# Set remote syslog1 to syslog.example.com
+$ racadm -r $IPADDRESSIDRAC -u $USERIDRAC -p $PWDIDRAC set iDRAC.SysLog.Server=syslog.example.com
 ```
