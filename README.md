@@ -16,6 +16,13 @@ $ racadm -r $IPADDRESSIDRAC -u $USERIDRAC -p $PWDIDRAC config -g ifcRacManagedNo
 # Change DNS Idrac name
 $ racadm -r $IPADDRESSIDRAC -u $USERIDRAC -p $PWDIDRAC set iDRAC.NIC.DNSRacName $NEWNAME
 
+# Change DNS IP Address
+$ racadm -r $IPADDRESSIDRAC -u $USERIDRAC -p $PWDIDRAC set iDRAC.IPv4.DNS1 192.168.0.5
+$ racadm -r $IPADDRESSIDRAC -u $USERIDRAC -p $PWDIDRAC set iDRAC.IPv4.DNS2 192.168.0.6
+
+# Set DNS domain
+$ racadm -r $IPADDRESSIDRAC -u $USERIDRAC -p $PWDIDRAC set iDRAC.Nic.DNSDomainName $DOMAIN
+
 # Reset Idrac card
 $ racadm -r $IPADDRESSIDRAC -u $USERIDRAC -p $PWDIDRAC racreset
 
